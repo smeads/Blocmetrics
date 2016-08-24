@@ -1,28 +1,8 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An analytics service and reporting tool that you can use with web apps to track user activity.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+User Case:
+  * A client-side JavaScript snippet that allows a user to track events on their website.
+  * A server-side API that captures and saves those events to a database.
+  * A Rails application that displays the captured event data for a user.
