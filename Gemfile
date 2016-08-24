@@ -30,3 +30,5 @@ source 'https://rubygems.org'
  gem 'devise'
 
  gem 'figaro', '1.0'
+
+ gem 'faker'
