@@ -1,6 +1,8 @@
 <div class="container">
+ <h1>Application Event Analysis</h1>
  <h2><%= @registered_application.name %></h2>
- <table style="width: 10%" class="table table-bordered">
+ <h4><%= @registered_application.url %></h4>
+ <table style="width: 20%" class="table table-bordered">
      <tr>
        <th>Event Name</th>
        <th>Occurance</th>
@@ -16,9 +18,10 @@
 
  <div class="row">
    <div class="col-md-8">
-     <h4><%= @registered_application.url %></h4>
+     <%= link_to 'Return to Applications', registered_applications_path %>
    </div>
    <div class="col-md-4">
-     <%= link_to "Edit", edit_registered_application_path(@registered_application), class: 'btn btn-success' %>
+     <%= link_to "Edit Application", edit_registered_application_path(@registered_application), class: 'btn btn-success' %>
      <%= link_to "Delete Application", @registered_application, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this application?'} %>
    </div>
+ </div>
