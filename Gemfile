@@ -5,7 +5,6 @@ source 'https://rubygems.org'
 
  # #1
  group :production do
-   gem 'pg'
    gem 'rails_12factor'
  end
 
@@ -32,3 +31,9 @@ source 'https://rubygems.org'
  gem 'figaro', '1.0'
 
  gem 'faker'
+
+ gem 'chartkick'
+
+ gem 'groupdate'
+
+ gem 'pg'

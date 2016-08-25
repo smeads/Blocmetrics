@@ -14,6 +14,28 @@
        </tr>
      <% end %>
   </table>
+  <div class="row">
+    <div class="col-md-14">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="center col-md-5"></th>
+            <th class="center"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+            <td class="center"><%= pie_chart @registered_application.events.group(:name).count %></td>
+            <td <%= line_chart @registered_application.events.group_by_day(:created_at).count %></td>
+          </tr>
+          <tr>
+            <td class="center bold">Event Distribution</td>
+            <td class="center bold">Event Tmeline</td>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
 
  <div class="row">
