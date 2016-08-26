@@ -37,3 +37,5 @@ source 'https://rubygems.org'
  gem 'groupdate'
 
  gem 'pg'
+
+ gem 'rack-cors', :require => 'rack/cors'
