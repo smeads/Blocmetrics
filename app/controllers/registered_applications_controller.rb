@@ -44,7 +44,7 @@ class RegisteredApplicationsController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     @registered_application = RegisteredApplication.find(params[:id])
 
     if @registered_application.destroy

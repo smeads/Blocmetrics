@@ -1,6 +1,6 @@
 class API::EventsController < ApplicationController
   skip_before_action :verify_authenticity_token
-  skip_before_action :authenticate_user!, only: [:create]
+  skip_before_action :authenticate_user!
   before_action :set_access_control_headers
 
 
@@ -12,11 +12,11 @@ class API::EventsController < ApplicationController
 
   def create
     event_params = JSON.parse(request.body.read)
-    application = RegisteredApplication.find_by(url: request.env['HTTP_ORIGIN'])
-    if application.nil?
+    registered_application = RegisteredApplication.find_by(url: request.env['HTTP_ORIGIN'])
+    if registered_application.nil?
       render json: 'Unregistered application', status: :unprocessable_entity
     else
-      @event = application.events.build(name: event_params['name'])
+      @event = registered_application.events.build(name: event_params['name'])
       if @event.save
         render json: @event, status: :created
       else
