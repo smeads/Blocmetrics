@@ -21,3 +21,12 @@ following snippet in your application.js file:
     request.send(JSON.stringify(event));
   }
 ```
+Additionally add the following code inside the desired view pages  you want to track. This example has the event name "User Profile". Feel free to use any name that best describes the page you are tracking:
+
+```
+<script type="text/javascript">
+     $(document).on("ready page:load", function () {
+        blocmetrics.report("Users Profile");
+      })
+</script>
+```
